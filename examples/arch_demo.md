@@ -28,11 +28,11 @@ Agent 生成的架構圖 (Mermaid)：
 ```mermaid
 graph TD
     User[使用者] --> LB[Load Balancer]
-    LB --> Web[Web Server (Next.js)]
-    Web --> Redis[Redis Cache (庫存檢查)]
-    Web --> Queue[Message Queue (訂單請求)]
+    LB --> Web["Web Server (Next.js)"]
+    Web --> Redis["Redis Cache (庫存檢查)"]
+    Web --> Queue["Message Queue (訂單請求)"]
     Queue --> Worker[Order Worker]
-    Worker --> DB[(PostgreSQL)]
+    Worker --> DB[("PostgreSQL")]
 ```
 
 🟢 **效益**：
