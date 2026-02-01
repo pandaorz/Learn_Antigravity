@@ -17,7 +17,7 @@
 
 ### 2. Agent 執行過程
 1.  **架構設計**：Agent 建議使用 Microservices 架構，利用 Redis 處理高併發，並使用 Queue (如 Kafka/RabbitMQ) 來削峰填谷。
-2.  **圖表繪製**：直接在 Markdown 文件中生成 Mermaid 圖表代码。
+2.  **圖表繪製**：直接在 Markdown 文件中生成 Mermaid 圖表程式碼。
 3.  **文件產出**：建立 `architecture.md` 詳細說明設計理念。
 
 ---

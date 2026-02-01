@@ -46,7 +46,7 @@ description: 協助撰寫高品質技術文件的 Skill。
 
 **方式 A：顯式呼叫 (Explicit)**
 在 **Chat 面板** 中輸入：
-> "@skills/technical_writing 请帮我重写这段 API 说明。"
+> "@skills/technical_writing 請幫我重寫這段 API 說明。"
 （註：透過 `@` 符號可以快速引用專案中的檔案或 Skill）
 
 **方式 B：自然語言觸發 (Implicit)**
