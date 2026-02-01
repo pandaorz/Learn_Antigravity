@@ -76,3 +76,54 @@ Agent 可能會寫出：「這個函數是用來登入的，傳入帳號密碼�
 > 3.  **注意**：請勿明碼傳輸密碼。
 
 🟢 **效益**：透過 Skill，你瞬間擁有了一位熟讀團隊規範的資深助手。
+
+---
+
+## 🛠️ 如何從零開始建立 Skill？ (How to Create Skills)
+
+當你發現自己**反覆輸入相同的指令**，或者**不斷糾正 Agent 的格式錯誤**時，就是建立 Skill 的最佳時機。
+
+### 步驟 1：分析模式 (Analyze Patterns)
+回顧你的對話紀錄，找出重複性高的需求。
+- *情境*：每次請 Agent 寫 API 文件，都要提醒它「要包含 Request Body 範例」和「使用 Markdown 表格」。
+- *規則*：`Request Body` is MUST, `Markdown Table` is MUST.
+
+### 步驟 2：提取規則 (Extract Rules)
+將這些規則轉化為 Skill 的 `核心原則` 與 `模板`。
+
+### 步驟 3：撰寫定義檔 (Write Definitions)
+不需要從頭手寫，你可以**請 Agent 幫你寫**！
+
+> **Prompt 範例 (Metaprompting)**：
+> "我想建立一個名為 `API Documentation Expert` 的 Skill。
+> 請幫我撰寫 `SKILL.md` 檔案。
+> 規則如下：
+> 1. 所有參數都要有型別說明。
+> 2. 必須包含 CURL 範例。
+> 3. 失敗的回傳範例也要列出。
+> 請參考 Antigravity 的 Skill 格式輸出。"
+
+---
+
+## 🔧 輔助工具與資源 (Tools & Resources)
+
+1.  **Metaprompting (用 AI 寫 AI 設定)**
+    如上所述，直接用自然語言告訴 Agent 你想要什麼 Skill，讓它幫你產生 YAML Frontmatter 與 Markdown 結構。
+
+2.  **GitHub 資源 (Awesome Prompts)**
+    參考開源社群的 Prompt 集合，將其改寫為 Skill。
+    - [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
+    - [Awesome AI Skills](https://github.com/topics/ai-skills) (虛構範例，請搜尋真實資源)
+
+3.  **團隊共享**
+    將 `skills/` 目錄納入 Git 版本控制。當隊友 `git pull` 下來後，他們也能立即使用你精心調校的 Skill。
+
+---
+
+## ⚙️ 設定與操作
+- **位置**：通常存放在專案根目錄的 `skills/<skill_name>/SKILL.md`。
+- **生效**：
+    - **全域生效**：某些設定可讓 Skill 對所有對話生效（視 IDE 實作而定）。
+    - **特定呼叫**：如前述，使用 `@` 或是自然語言觸發。
+- **測試**：
+    建立完 Skill 後，開一個新的 Chat Session，輸入相關指令測試回應。如果不滿意，隨時修改 `SKILL.md`，效果通常是即時更新的。

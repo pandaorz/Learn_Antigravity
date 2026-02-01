@@ -33,8 +33,8 @@ Antigravity 的強大之處在於實際應用。以下我們將透過具體的�
 
 Antigravity 的強大之處在於實際應用。以下我們將透過具體的範例，展示它如何改變你的工作流程。
 
-### 💻 軟體開發 (Software Development)
-Antigravity 能協助你完成軟體開發生命週期 (SDLC) 的各個階段：
+### 💻 安全軟體開發 (Secure Software Development - SSDLC)
+Antigravity 能協助你完成安全軟體開發生命週期 (SSDLC) 的各個階段，實現資安左移 (Security Shift Left)：
 
 #### 1. 專案規劃 (Project Planning)
 從模糊的想法開始，協助你梳理需求、拆解任務並預估資源。
@@ -48,7 +48,11 @@ Antigravity 能協助你完成軟體開發生命週期 (SDLC) 的各個階段：
 進入實作階段，Agent 能處理環境檢查、程式碼實作與測試驗證的完整迴圈。
 👉 **[查看實例：自動實作爬蟲與測試](examples/coding_demo.md)**
 
-#### 4. 文件撰寫 (Documentation)
+#### 4. 資安檢測 (Security Testing)
+在開發階段即時偵測程式碼弱點 (SAST) 與依賴漏洞 (SCA)，確保交付安全的程式碼。
+👉 **[查看實例：弱點掃描與機敏資料防護](examples/security_demo.md)**
+
+#### 5. 文件撰寫 (Documentation)
 自動掃描程式碼並生成準確的 API 文件，解決文件過期的痛點。
 👉 **[查看實例：自動更新 API 文件](examples/docs_demo.md)**
 
@@ -65,9 +69,16 @@ Antigravity 能協助你完成軟體開發生命週期 (SDLC) 的各個階段：
 - **環境設定**：幫你 debug 複雜的環境變數、Python 版本衝突或安裝依賴。
 👉 **[查看實例：創意發想與環境除錯](examples/work_demo.md)**
 
-### 🧠 擴充能力 (AI Skills)
-透過自定義的 Skill 檔案，讓 Agent 學習你團隊的開發規範與溝通風格。
-👉 **[查看實例：建立技術寫作 Skill](examples/skill_demo.md)**
+### 🧠 進階應用：指令與技能 (Prompts & Skills)
+這是讓 Agent 從「堪用」進化到「好用」的關鍵。
+
+#### 1. 指令工程 (Prompt Engineering)
+Prompt 是你與 Agent 溝通的橋樑。學會如何下達精確、包含脈絡與限制的指令，能大幅提升產出品質。
+👉 **[查看詳細指南：Prompt 原理與撰寫技巧](examples/prompt_guide.md)**
+
+#### 2. 自定義技能 (Custom Skills)
+當 Prompt 變得太長且需要重複使用時，就將其封裝成 **Skill**。這就像是為 Agent 安裝「擴充套件」，讓它學習特定的專業知識或團隊規範。
+👉 **[查看詳細指南：從零建立 Skill 的方法與工具](examples/skill_demo.md)**
 
 
 ---
