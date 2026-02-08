@@ -101,6 +101,11 @@ Antigravity 能協助你完成安全軟體開發生命週期 (SSDLC) 的各個�
 我們準備了一個從零打造購物網站後端的完整案例，展示如何將規劃、架構、開發、資安與文件整合在一個連續的工作流中。
 👉 **[查看實例：從零打造購物網站後端 (E-commerce API)](examples/full_lifecycle_demo.md)**
 
+#### 7. 全域配置與個人化 (Configuration)
+**如何讓 Agent 永遠說中文，或遵守你的 Code Style？**
+Antigravity 支援「全域設定 (`GEMINI.md`)」與「專案設定 (`.cursorrules`)」。透過配置這些檔案，你可以讓 AI 真正成為懂你的專屬助手。
+👉 **[查看實例：全域配置教學 (GEMINI.md vs .cursorrules)](examples/config_demo.md)**
+
 ### 💡 最佳實踐：分階段 vs 一句話 (Best Practices)
 在使用 Agent 時，你可能會猶豫：「我該一次把所有需求給它，還是分步驟做？」
 
