@@ -1,252 +1,51 @@
-# 如何使用 Antigravity：從指令到協作的進化指南
+# Antigravity 使用指南：Agentic AI 協作新典範
 
-在人工智慧輔助開發的領域，我們正經歷一場從「對話（Chatting）」到「行動（Acting）」的典範轉移。Antigravity 不僅僅是一個回答問題的聊天機器人，它是一個能夠感知上下文、主動規劃並執行任務的 **Agentic AI（代理式 AI）**。
+歡迎來到 **Antigravity** 的世界。這不只是一個工具，而是一種全新的工作型態。
 
-這篇文章將帶你了解如何運用 Antigravity 來撰寫程式、自動化文件以及協助日常工作，並深入探討它如何透過全新的協作模式為你節省時間。
+## 1. 核心概念 (Core Concepts)
 
----
+Antigravity 是一個 **Agentic AI（代理式 AI）**。與傳統的 Chatbot (ChatGPT) 或 Copilot (GitHub Copilot) 不同，它不只會「說話」或「補全程式碼」，它具備**行動能力 (Agency)**。
 
-## 1. AI 協作的演進與對決 (Evolution & Comparison)
+### Agentic AI 的三大支柱
+1.  **全域感知 (Context Awareness)**：它能理解整個專案結構，而不僅僅是當前檔案。
+2.  **工具使用 (Tool Use)**：它能操作終端機、編輯檔案、瀏覽網頁。
+3.  **代理工作流 (Workflow)**：它遵循 **規劃 -> 執行 -> 驗證** 的循環，能處理複雜任務。
 
-要理解 Antigravity 的定位，我們需要回顧 AI 輔助開發的三個階段：
-
-### 📜 第一階段：Chatbot 時代 (Traditional AI)
-- **代表產品**：ChatGPT (Web), Claude (Web)
-- **互動模式**：純文字問答。
-- **痛點**：AI 像個「只會說話的顧問」。你必須手動複製程式碼給它，再把它的回答複製回編輯器。它不知道你的專案結構，容易給出斷章取義的建議。
-
-### 🤝 第二階段：Copilot 時代 (AI Assisted)
-- **代表產品**：VS Code + GitHub Copilot Plugin
-- **互動模式**：**「副駕駛 (Co-pilot)」**。
-- **特性**：整合在 IDE 中，專注於「程式碼補全 (Completion)」與「行內問答」。
-- **限制**：早期版本是被動的。你是「駕駛 (Driver)」，你必須決定現在要改哪個檔案、游標要停在哪裡。
-- **演進**：近期 GitHub Copilot 也推出了 **Agent Mode**，開始具備部分的跨檔案編輯與終端機操作能力，正逐漸向第三階段邁進。
-
-### 🤖 第三階段：Agent 時代 (Agentic AI)
-- **代表產品**：**Antigravity**, Cursor, Windsurf, Devin, Trae
-- **互動模式**：**「代理人 (Agent)」**。
-- **特性**：它擁有「手腳」。你下達高層次指令（如「幫我把整個模組重構為 MVC 架構」），Agent 會主動規劃、讀寫多個檔案、甚至執行終端機指令驗證結果。
-- **轉變**：你從「駕駛」變成了「指揮官」。
+### 你是指揮官 (Commander)
+在 Antigravity 中，你的角色從「駕駛 (Driver)」轉變為「指揮官」。你負責設定目標與驗收成果，繁瑣的實作細節則交給 Agent。
 
 ---
 
-### 📊 跨世代對決：Chatbot vs Copilot vs Agent
+## 2. 實戰應用 (Practical Applications)
 
-| 特性 | 1. 傳統 Chatbot | 2. Copilot (Plugin) | 3. Agentic AI (Antigravity) |
-| :--- | :--- | :--- | :--- |
-| **互動模式** | 問答 (Chat) | 補全 (Completion) + 問答 | **任務指派 (Task)** + 自動執行 |
-| **感知範圍** | 僅對話視窗 | 當前檔案 / 選取程式碼 | **整個專案目錄** & 終端機狀態 |
-| **檔案操作** | 無 (需手動複製) | 僅限當前游標處 | **跨檔案讀寫 / 建立 / 刪除** |
-| **執行能力** | 無 | 無 | **可執行終端機指令 (Run Command)** |
-| **你的角色** | 搬運工 (Copy-paster) | 駕駛 (Driver) | **指揮官 (Commander) / 審閱者** |
+我們準備了一系列的範例，帶你體驗 Agent 在不同場景下的應用：
 
-### ✅ Agentic AI 的獨特優勢
-- **速度**：對於繁瑣、重複性的任務（如產生大量 boilerplate code、撰寫測試），速度是人類的數倍。
-- **品質**：透過自動化的 linting 和測試流程，保持程式碼品質的一致性。
-- **專注**：讓你專注於「做什麼 (What)」，而不是「怎麼做 (How)」。
+### 💻 軟體開發 (Software Development)
+-   **[系統架構與設計](examples/arch_demo.md)**：如何用 Agent 規劃前後端架構。
+-   **[功能實作與測試](examples/coding_demo.md)**：自動撰寫程式與單元測試。
+-   **[資安檢測 (SSDLC)](examples/security_demo.md)**：弱點掃描與修補。
+-   **[完整專案演練](examples/full_lifecycle_demo.md)**：從零打造購物網站後端。
 
-### ⚠️ 面臨的挑戰
-- **信任與授權**：需要學習如何下達清晰的指令，並習慣「放手」讓 AI 操作檔案。
-- **垃圾進，垃圾出 (GIGO)**：如果你的需求描述不清，Agent 規劃的方向就會錯誤。因此，**清晰的溝通能力**變得比 API 記憶能力更重要。
+### 📄 文件與知識管理 (Knowledge Management)
+-   **[自動化文件維護](examples/docs_demo.md)**：讓 API 文件永遠保持最新。
+-   **[文章與筆記撰寫](examples/writing_demo.md)**：撰寫技術部落格或會議摘要。
 
----
+### 🌐 網頁與瀏覽器 (Web & Browser)
+-   **[自動化瀏覽器操作](examples/browser_demo.md)**：爬蟲、RWD 測試與自動填表。
 
-## 2. 核心概念：什麼是 Agentic AI？
-
-**Antigravity** 是一個主動的合作夥伴，它具備以下三大核心能力：
-
-### 🔍 全域感知 (Context Awareness)
-它不只看到你當前打開的檔案，還能「看見」整個專案結構。它知道你的 `utils.py` 在哪裡，也知道你的 `README.md` 寫了什麼規範。這意味著你不需要把所有程式碼複製貼上給它，它自己找得到。
-
-### 🛠️ 工具使用 (Tool Use)
-它擁有「雙手」。它可以：
-- **執行終端機指令**：安裝套件、執行測試、列出目錄。
-- **編輯檔案**：直接修改程式碼，不需要你手動複製貼上。
-- **瀏覽網頁**：查閱最新的官方文件或解決方案。
-
-### 🔄 代理工作流 (Agentic Workflow)
-它不像傳統 Chatbot 講完話就結束，而是會遵循 **規劃 (Plan) -> 執行 (Execute) -> 驗證 (Verify)** 的循環。它會先思考該做什麼，然後動手做，最後檢查自己做得對不對。
+### ⚙️ 設定與優化 (Configuration)
+-   **[全域與專案設定](examples/config_demo.md)**：自定義 Agent 的行為準則。
+-   **[Prompt Engineering 指南](examples/prompt_guide.md)**：學會如何下達精準指令。
+-   **[自定義技能 (Skills)](examples/skill_demo.md)**：打造專屬的 AI 專家助手。
 
 ---
 
-## 3. 實戰操作：如何協作？
+## 3. 開始你的旅程 (Getting Started)
 
-Antigravity 的強大之處在於實際應用。以下我們將透過具體的範例，展示它如何改變你的工作流程。
+建議你先閱讀 **[LEARN.md](LEARN.md)**，了解本專案的學習路徑與核心技能。
 
-### 💻 安全軟體開發 (Secure Software Development - SSDLC)
-Antigravity 能協助你完成安全軟體開發生命週期 (SSDLC) 的各個階段，實現資安左移 (Security Shift Left)：
-
-#### 1. 專案規劃 (Project Planning)
-從模糊的想法開始，協助你梳理需求、拆解任務並預估資源。
-👉 **[查看實例：專案流程與任務拆解](examples/pm_demo.md)**
-
-#### 2. 系統架構 (System Architecture)
-無論是網站系統還是視窗應用程式，協助你規劃前後端架構、資料流與模組關係。
-👉 **[查看實例：系統架構設計與圖表](examples/arch_demo.md)**
-
-#### 3. 程式實作 (Implementation)
-進入實作階段，Agent 能處理環境檢查、程式碼實作與測試驗證的完整迴圈。
-👉 **[查看實例：自動實作爬蟲與測試](examples/coding_demo.md)**
-
-#### 4. 資安檢測 (Security Testing)
-在開發階段即時偵測程式碼弱點 (SAST) 與依賴漏洞 (SCA)，確保交付安全的程式碼。
-👉 **[查看實例：弱點掃描與機敏資料防護](examples/security_demo.md)**
-
-#### 5. 文件撰寫 (Documentation)
-自動掃描程式碼並生成準確的 API 文件，解決文件過期的痛點。
-👉 **[查看實例：自動更新 API 文件](examples/docs_demo.md)**
-
-#### 6. 綜合演練 (Full Lifecycle Showcase)
-**想看如何將上述所有步驟串連起來？**
-我們準備了一個從零打造購物網站後端的完整案例，展示如何將規劃、架構、開發、資安與文件整合在一個連續的工作流中。
-👉 **[查看實例：從零打造購物網站後端 (E-commerce API)](examples/full_lifecycle_demo.md)**
-
-#### 7. 全域配置與個人化 (Configuration)
-**如何讓 Agent 永遠說中文，或遵守你的 Code Style？**
-Antigravity 支援「全域設定 (`GEMINI.md`)」與「專案設定 (`.cursorrules`)」。透過配置這些檔案，你可以讓 AI 真正成為懂你的專屬助手。
-👉 **[查看實例：全域配置教學 (GEMINI.md vs .cursorrules)](examples/config_demo.md)**
-
-### 💡 最佳實踐：分階段 vs 一句話 (Best Practices)
-在使用 Agent 時，你可能會猶豫：「我該一次把所有需求給它，還是分步驟做？」
-
-| 策略 | 一句話生成 (One-Shot) | 分階段實作 (Iterative) |
-| :--- | :--- | :--- |
-| **適用情境** | 簡單腳本、快速原型 (Prototype)、單一功能函式。 | **複雜系統、生產環境專案 (Production)**。 |
-| **優點** | 速度快，幾秒鐘就有結果。 | **品質高**，可控制性強，容易除錯。 |
-| **風險** | 容易出現幻覺 (Hallucination)，程式碼過長難以檢查。 | 需要較多的人機互動，初期速度較慢。 |
-
-> ** Antigravity 建議**：
-> 對於正式軟體開發，請採用 **分階段 (Iterative)** 策略。先規劃架構，再實作核心模組，最後擴充功能。這樣可以確保每一步都在你的掌控之中 (Human-in-the-loop)。
-
-### ✍️ 撰寫文章 (Writing Articles)
-除了開發相關文件，Agent 也能協助你撰寫各類文章，提升知識輸出的效率。
-- **科技文章**：部落格、技術評測。
-- **學習筆記**：論文摘要、課程筆記。
-- **正式公文**：提案報告、會議記錄。
-👉 **[查看實例：筆記與公文撰寫](examples/writing_demo.md)**
-
-### 🤝 協助工作 (Work Assistance)
-除了核心開發，它還能幫你處理周邊任務：
-- **腦力激盪**：擬定行銷文案或活動企劃，或為專案命名。
-- **環境設定**：幫你 debug 複雜的環境變數、Python 版本衝突或安裝依賴。
-👉 **[查看實例：創意發想與環境除錯](examples/work_demo.md)**
-
-### 🌐 自動操作瀏覽器 (Automated Browser Operations)
-
-Antigravity Agent 不僅僅侷限於 IDE 內部，它還能啟動並控制瀏覽器，協助你完成與 Web 相關的任務。
-
-#### 為什麼要讓 Agent 操作瀏覽器？
-- **真實環境測試**：Agent 可以像真實使用者一樣點擊按鈕、填寫表單，驗證前端功能是否正常。
-- **資訊檢索**：當需要查閱最新的官方文件、API 參考或 Stack Overflow 解決方案時，Agent 可以直接上網搜尋並閱讀內容，無需你手動複製貼上。
-- **自動化流程**：對於重複性的網頁操作（如登入系統抓取報表、填寫申請單），Agent 可以代勞。
-
-#### 什麼情況下適合使用？
-- **驗證響應式設計 (RWD)**：請 Agent 調整視窗大小，確認網頁在手機版與桌面版是否都能正常顯示。
-- **除錯前端錯誤**：當按鈕沒反應時，請 Agent查看瀏覽器 Console 是否有 JavaScript 報錯或網路請求失敗 (404/500)。
-- **複雜流程測試**：繁瑣的像是「註冊 -> 收信驗證 -> 登入 -> 購物車 -> 結帳」這類跨頁面流程，交給 Agent 自動跑一遍。
-- **文件與解法搜尋**：當遇到未知的錯誤代碼，讓 Agent 直接去 GitHub Issue 或 Stack Overflow 找類似災情的解法。
-- **即時資料驗證**：檢查 Deploy 後的網站是否正確顯示了最新的資料庫內容，無需人工逐一比對。
-
-#### 如何使用？
-只需在對話中明確下達指令，例如：
-- 「打開瀏覽器搜尋 React 19 的新特性」
-- 「幫我測試登入頁面的錯誤處理流程」
-- 「去這個 URL 抓取表格資料」
-
-Agent 會啟動一個受控的瀏覽器實例（你會看到它打開），並將操作過程錄製下來。**操作結束後，錄影檔 (WebP) 會自動儲存在 Artifacts 列表中，你可以在對話視窗中直接播放，或是在 `artifacts` 資料夾中找到它們。**
-
-#### 🖐️ 人機協作與介入 (Human Intervention)
-雖然是自動化，但你隨時可以取回控制權。
-
-- **為什麼需要介入？**
-    - **驗證碼 (CAPTCHA) 與 2FA**：遇到「選出所有紅綠燈」的圖片驗證或手機簡訊驗證時，Agent 可能會卡住。這時你可以手動輸入，再叫 Agent 繼續。
-    - **關鍵決策**：在送出付款或刪除資料前，你可能希望親自確認最後一眼。
-- **如何操作？**
-    - 瀏覽器視窗是完全互動的。你可以在 Agent 操作的空檔隨時點擊或輸入。
-    - 如果 Agent 遇到無法處理的畫面，它會暫停並詢問你。你處理完後，只需在對話視窗回覆「已完成」或「繼續」，Agent 就會接手剩下的工作。
-
-#### 🔐 安全處理帳號密碼 (Secure Credential Handling)
-若流程中包含登入，可以全自動執行，但必須注意安全性，避免密碼外洩或留在紀錄中。
-
-- **❌ 錯誤做法**：直接在對話框輸入「我的密碼是 xxxx」或寫在硬編碼 (Hard-code) 在程式碼中。這樣會讓密碼留在對話紀錄或 Git 歷史裡。
-- **✅ 方法一：使用 .env 檔案 (推薦)**
-    1.  建立一個 `.env` 檔案，內容填寫 `TEST_PASS=secret`。
-    2.  **務必**將 `.env` 加入 `.gitignore`，防止誤傳到儲存庫。
-    3.  請 Agent：「讀取 `.env` 檔案中的帳密來登入」。
-- **✅ 方法二：環境變數 (防止 History 紀錄)**
-    - 若要臨時設定環境變數，可在終端機指令**最前方加一個空白鍵** (例如：` export MY_PASS='secret'`)。
-    - 許多 Shell (如 Zsh, Bash) 預設不會將「以空白開頭」的指令寫入 History 紀錄檔，避免被他人查閱。
-
-#### 🗺️ 處理複雜流程的指引技巧 (Guiding Complex Workflows)
-當網站流程太過複雜，直接一句話指令可能會失敗。你可以透過以下方式「手把手」教學：
-
-1.  **拆解步驟 (Step-by-Step)**：
-    不要只說「幫我報稅」，而是拆解成：
-    > 「1. 用我的帳號登入系統。 2. 點擊『申報』分頁。 3. 上傳資料夾中的 `data.csv`。 4. 截圖最後的確認畫面給我看。」
-
-2.  **建立指引文件 (Checklist)**：
-    如果你經常需要執行此操作，可以快速寫一個 Markdown 清單 (如 `login_flow.md`)：
-    ```markdown
-    - [ ] 進入 https://example.com
-    - [ ] 點擊右上角 User Icon
-    - [ ] 選擇 Dark Mode
-    ```
-    然後告訴 Agent：「請依照 `login_flow.md` 的步驟操作」。
-
-3.  **視覺化暗示 (Visual Hints)**：
-    如果按鈕沒有文字，可以描述外觀或位置：
-    > 「點擊右上角那個像『齒輪』的 icon」、「在紅色的警告橫幅下方有一個『忽略』按鈕，點擊它」。
-
-#### 🚫 目前的限制 (Current Limitations)
-雖然 Agent 很強大，但它「無法」操作瀏覽器以外的視窗 (OS Level)。
-
-- **檔案上傳/下載視窗**：
-    - 當 Agent 點擊「上傳」按鈕時，作業系統的檔案選取視窗會跳出來。**Agent 看不到也無法控制這個視窗**。
-    - **解決方案**：此時 Agent 會停下來，你需要手動選擇檔案並點擊「開啟」，然後告訴 Agent 繼續。
-    - **替代方案**：若網站支援 **Drag & Drop**，可嘗試請 Agent 模擬拖曳動作；或是改用 **API 呼叫** 來傳送檔案，避開 UI 操作。
-- **列印與存擋**：
-    - 按下 `Ctrl+P` 跳出的列印對話框，Agent 也無法控制。
-    - **替代方案**：請 Agent 直接 **「截圖全頁」** 或使用瀏覽器的 **「Save as PDF」** 指令 (若支援) 來保存畫面。
-- **硬體驗證**：
-    - 指紋解鎖 (TouchID)、實提金鑰 (YubiKey)、或是需讀取本機憑證的銀行網站，也需要你親自操作。
-    - **替代方案**：在測試環境改用 **TOTP (Authenticator App)** 驗證；或是先在自己的瀏覽器登入後，將 **Cookies (Session ID)** 複製給 Agent 使用 (Session 移植)。
-- **高動態內容**：
-    - 需要精準時機的操作 (如網頁遊戲) 或看影片 (Agent 無法聽到聲音或流暢觀看影片)，效果較差。
-    - **替代方案**：不依賴視覺判斷，改請 Agent 檢查網頁背後的 **DOM 狀態** (如 `<video>` 標籤的 `paused` 屬性) 來確認是否播放成功。
-
-
-### 🧠 進階應用：指令與技能 (Prompts & Skills)
-
-這是讓 Agent 從「堪用」進化到「好用」的關鍵。
-
-#### 1. 指令工程 (Prompt Engineering)
-Prompt 是你與 Agent 溝通的橋樑。學會如何下達精確、包含脈絡與限制的指令，能大幅提升產出品質。
-👉 **[查看詳細指南：Prompt 原理與撰寫技巧](examples/prompt_guide.md)**
-
-#### 2. 自定義技能 (Custom Skills)
-當 Prompt 變得太長且需要重複使用時，就將其封裝成 **Skill**。這就像是為 Agent 安裝「擴充套件」，讓它學習特定的專業知識或團隊規範。
-👉 **[查看詳細指南：從零建立 Skill 的方法與工具](examples/skill_demo.md)**
-
+> **Antigravity 建議**：
+> 不要急著一次做完所有事。先從一個小任務開始（例如「幫我解釋這段程式碼」），慢慢建立對 Agent 的信任與默契。
 
 ---
-
-## 4. 為何節省時間？ (The Efficiency Shift)
-
-使用 Antigravity 最顯著的感受是 **「認知卸載 (Cognitive Offloading)」**。
-
-1.  **減少情境切換 (Context Switching)**：
-    你不需要在瀏覽器、終端機和編輯器之間不斷切換。你只需要在一個介面下達高層次指令，繁瑣的切換工作由 Agent 代勞。
-
-2.  **平行處理 (Parallel Processing)**：
-    當 Agent 正在「思考」如何重構程式碼，或是正在「執行」一連串的測試時，你可以利用這段時間思考下一步的架構，或是去喝杯咖啡。
-
-3.  **精確執行 (Precision)**：
-    人手複製貼上容易出錯（少了括號、貼錯行）。Agent 直接對檔案進行操作，大幅降低了低級錯誤的發生率。
-
----
-
-## 結語
-
-Antigravity 不僅僅是一個工具，它代表了一種全新的工作型態。它不是要取代工程師，而是要將工程師從繁瑣的「實作細節」中解放出來，讓我們能將寶貴的腦力投注在架構設計、創意發想與決策上。
-
-**準備好開始你的 Agentic 之旅了嗎？**
+*文件維護者：Learn_Antigravity Team*

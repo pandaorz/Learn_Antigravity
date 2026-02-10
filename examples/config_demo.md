@@ -73,3 +73,9 @@ Antigravity 的設定分為兩個層級，**專案級設定會覆蓋 (Override) 
 1.  **由簡入繁**：先把通用的規則（如繁體中文）放進 Global `GEMINI.md`。
 2.  **專案特化**：當你發現某個規則只對這個專案有效（如 Soft Delete），請放進 Project `.cursorrules`。
 3.  **定期檢視**：如果發現某個 Project Rule 在每個專案都用到，就將它升級為 Global Rule。
+
+---
+
+### 📚 下一步
+- 回到 **[LEARN.md](../LEARN.md)** 查看完整學習路徑。
+- 閱讀 **[Antigravity 使用指南](../Antigravity_Guide.md)** 了解更多核心概念。
